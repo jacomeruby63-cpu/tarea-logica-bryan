@@ -50,8 +50,12 @@ def simular_optimizacion():
         presupuesto_asignado_total += presupuesto_sugerido
 
         canales.append({
-            "id": i, "nombre": nombre, "costo": costo_actual, "eficiencia": eficiencia,
-            "estado": estado, "presupuesto": presupuesto_sugerido
+            "id": i,
+            "nombre": nombre,
+            "costo": costo_actual,
+            "eficiencia": eficiencia,
+            "estado": estado,
+            "presupuesto": presupuesto_sugerido
         })
 
     # BUCLE ITERATIVO DE COMPENSACIÓN (WHILE)
