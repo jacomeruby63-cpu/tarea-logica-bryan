@@ -1,0 +1,12 @@
+Fragmento de código
+graph TD
+    A([Inicio]) --> B[Generar número secreto]
+    B --> C[/Pedir número al usuario/]
+    C --> D{¿Es igual?}
+    D -- Sí --> E[/Mostrar: ¡Ganaste!/]
+    D -- No --> F{¿Es mayor?}
+    F -- Sí --> G[/Mostrar: Es menor/]
+    F -- No --> H[/Mostrar: Es mayor/]
+    G --> C
+    H --> C
+    E --> I([Fin])
