@@ -1,0 +1,30 @@
+import random
+
+def juego_adivina_el_numero():
+    print("¡Bienvenido al juego de Adivinar el Número!")
+    numero_secreto = random.randint(1, 100)
+    intentos = 0
+    adivinado = False
+
+    while not adivinado:
+        try:
+            # Solicitar intento y validar que sea un número
+            intento = int(input("Introduce un número entre 1 y 100: "))
+            intentos += 1
+            
+            # Lógica de comparación
+            if intento < 1 or intento > 100:
+                print("Por favor, ingresa un número dentro del rango permitido.")
+            elif intento < numero_secreto:
+                print("Es muy bajo. ¡Intenta de nuevo!")
+            elif intento > numero_secreto:
+                print("Es muy alto. ¡Intenta de nuevo!")
+            else:
+                adivinado = True
+                print(f"¡Felicidades! Adivinaste el número en {intentos} intentos.")
+                
+        except ValueError:
+            print("Entrada no válida. Por favor, ingresa solo números enteros.")
+
+# Ejecutar el juego
+juego_adivina_el_numero()
